@@ -22,7 +22,7 @@ rag:
 openai:
   base_url: "https://ark.cn-beijing.volces.com/api/v3"
   model: "deepseek-v3-2-251201"
-  api_key: "f4e056c3-7f09-4ef7-a569-383b79899848"  # 请替换为您的API密钥
+  api_key: "********"  # 请替换为您的API密钥
   temperature: 0.5
   max_tokens: 2000
 
