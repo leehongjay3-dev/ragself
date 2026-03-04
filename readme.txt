@@ -1,3 +1,6 @@
+https://github.com/leehongjay3-dev/ragself.git
+
+
 python vector_upload.py -d ./buginfo/
 unzip paraphrase-multilingual-MiniLM-L12-v2.zip -d models
 
