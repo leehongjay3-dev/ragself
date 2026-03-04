@@ -1,0 +1,58 @@
+# 数据库配置
+database:
+  host: "127.0.0.1"
+  port: 5432
+  user: "pgdba"
+  password: "Lihj@sz2019"
+  dbname: "postgres"
+
+# 模型配置
+model:
+  path: "./models"
+  vector_dim: 384
+
+# RAG配置
+rag:
+  top_k: 5
+  max_context_length: 4000
+  similarity_threshold: 0.7
+  max_history: 3
+
+# OpenAI配置
+openai:
+  base_url: "https://ark.cn-beijing.volces.com/api/v3"
+  model: "deepseek-v3-2-251201"
+  api_key: "f4e056c3-7f09-4ef7-a569-383b79899848"  # 请替换为您的API密钥
+  temperature: 0.5
+  max_tokens: 2000
+
+# 文件处理配置
+processing:
+  target_dir: "./"
+  max_file_size_mb: 100
+  
+  # 支持的文件类型
+  supported_types:
+    pdf:
+      enabled: true
+      extensions: [".pdf"]
+    txt:
+      enabled: true
+      extensions: [".txt", ".md", ".log", ".py", ".js", ".java", ".c", ".cpp", ".sh", ".sql"]
+      encodings: ["utf-8", "gbk", "gb2312", "utf-16", "latin-1"]
+
+# 分片配置
+chunking:
+  chunk_size: 5000
+  chunk_overlap: 500
+  min_chunk_size: 100
+  max_text_for_vector: 10000
+  txt_lines_per_chunk: 100
+  txt_overlap_lines: 10
+
+# 日志配置
+logging:
+  level: "error"
+  file: "vector_upload.log"
+  format: "%(asctime)s - %(levelname)s - %(message)s"
+
