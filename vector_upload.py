@@ -285,7 +285,7 @@ class DatabaseManager:
                 chunk_id INTEGER NOT NULL,
                 total_chunks INTEGER NOT NULL,
                 content TEXT,
-                vector vector(384),
+                vector vector(1024),
                 create_time TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
                 file_path VARCHAR(512),
                 page_count INTEGER,
