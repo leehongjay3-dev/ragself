@@ -19,8 +19,10 @@ wget https://hf-mirror.com/BAAI/bge-large-zh-v1.5/resolve/main/vocab.txt
 --上传文件，见demo.log
 python vector_upload.py  -c ./config.yaml  -d ./buginfo/
 
---查询执行
+--查询执行,直接调用返回
+python AskRag.py -q "ORA-00600: internal error code, arguments: [kghfrempty:ds"
 
+--交互式调用返回
 (oracleBUG) [root@redhatos zisk]# python AskRag.py -i
 ⚠️  无法导入vector_upload模块，使用内置配置: nofile 预期没有
 
