@@ -130,13 +130,13 @@ sudo systemctl start   postgresql-18
 echo "host    all             all             0.0.0.0/0               scram-sha-256" >> pg_hba.conf
 echo "listen_addresses = '*'"                                                        >> postgresql.conf
 CREATE EXTENSION IF NOT EXISTS pgvector;
-CREATE USER pgdba WITH SUPERUSER LOGIN PASSWORD 'Lihj@sz2019';
+CREATE USER pgdba WITH SUPERUSER LOGIN PASSWORD 'dbpassw0rd';
 
 
 sudo yum install -y mysql-server
 sudo systemctl start mysqld
 sudo systemctl enable mysqld
-CREATE USER 'mysqldba'@'%' IDENTIFIED BY 'Lihj@sz2019';
+CREATE USER 'mysqldba'@'%' IDENTIFIED BY 'dbpassw0rd';
 GRANT ALL PRIVILEGES ON *.* TO 'mysqldba'@'%' WITH GRANT OPTION;
 FLUSH PRIVILEGES;
 systemctl stop firewalld
@@ -154,8 +154,5 @@ xfs_growfs /dev/mapper/rhel-root
 
 
 --其他：模型下载方法！
-
-
-下载模型：
 https://public.ukp.informatik.tu-darmstadt.de/reimers/sentence-transformers/v0.2/
 https://www.modelscope.cn/models/sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2
